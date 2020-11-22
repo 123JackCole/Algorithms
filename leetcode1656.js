@@ -9,8 +9,8 @@
 var OrderedStream = function(n) {
     
     // create a stream of n values
-    const stream = new Array(n);
-    let pointer = 0;
+    this.stream = [...Array(n)];
+    this.pointer = 0;
     
 };
 
@@ -22,13 +22,12 @@ var OrderedStream = function(n) {
 
 OrderedStream.prototype.insert = function(id, value) {
     
-    stream[id - 1] = value;
+    this.stream[id - 1] = value;
     const chunk = [];
-    while (stream[pointer]) {
-        chunk.push(stream[pointer]);
-        pointer++;
+    while (this.stream[this.pointer]) {
+        chunk.push(this.stream[this.pointer]);
+        this.pointer++;
     }
-    console.log(chunk)
     return chunk;
     
 };
