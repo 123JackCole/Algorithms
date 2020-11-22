@@ -8,7 +8,8 @@
  */
 var OrderedStream = function(n) {
     
-    
+    // create a stream of n values
+    const stream = new Array(n);
     
 };
 
