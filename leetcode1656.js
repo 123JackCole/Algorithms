@@ -21,7 +21,8 @@ var OrderedStream = function(n) {
 
 OrderedStream.prototype.insert = function(id, value) {
     
-    
+    stream[id - 1] = value;
+    return;
     
 };
 
