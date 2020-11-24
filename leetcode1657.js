@@ -12,6 +12,32 @@
 
 var closeStrings = function(word1, word2) {
     
+    if (word1.length !== word2.length) return false;
     
+    word1Map = {};
+    word2Map = {};
 
+    for(let i = 0; i < word1.length; i++) {
+        word1Map[word1[i]] ? word1Map[word1[i]]++ : word1Map[word1[i]] = 1;
+        word2Map[word2[i]] ? word2Map[word2[i]]++ : word2Map[word2[i]] = 1;
+    }
+
+    // return false is the letters are not the same
+    word1Letters = Object.keys(word1Map).sort();
+    word2Letters = Object.keys(word2Map).sort();
+
+    for(let i = 0; i < word1Letters.length; i++) {
+        if (word1Letters[i] !== word2Letters[i]) return false;
+    }
+
+    // return false if the counts are not the same
+    word1Counts = Object.values(word1Map).sort((a,b) => a - b);
+    word2Counts = Object.values(word2Map).sort((a,b) => a - b);
+
+    for(let i = 0; i < word1Counts.length; i++) {
+        if (word1Counts[i] !== word2Counts[i]) return false;
+    }
+
+    return true;
+    
 };
