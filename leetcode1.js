@@ -15,6 +15,12 @@ const twoSum = (nums, target) => {
 
         temp = target - nums[i];
 
+        if (map[temp]) {
+            return [map[temp], i];
+        } else {
+            map[nums[i]] = i;
+        }
+
     }
 
 }
