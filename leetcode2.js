@@ -52,6 +52,7 @@ const addTwoNumbers = (l1, l2) => {
     console.log(sum)
 
     const ll = [];
+    
     // while (sum % 10 && sum %100) {
     //     ll.push(ListNode(sum % 10, sum % 100));
     //     sum /= 10;
