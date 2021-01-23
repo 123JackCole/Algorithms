@@ -8,6 +8,30 @@
 
 const countGoodRectangles = (rectangles) => {
 
+    let   maxLen = 0, 
+          currentMin = 0;
+    const map = {};
 
+    for (let i = 0; i < rectangles.length; i++) {
+
+        currentMin = Math.min(rectangles[i][0], rectangles[i][1]);
+        maxLen = Math.max(maxLen, currentMin);
+        map[currentMin] ? map[currentMin]++ : map[currentMin] = 1;
+
+    }
+
+    return map[maxLen];
 
 }
+
+// Example 1:
+
+// Input: rectangles = [[5,8],[3,9],[5,12],[16,5]]
+// Output: 3
+// Explanation: The largest squares you can get from each rectangle are of lengths [5,3,5,5].
+// The largest possible square is of length 5, and you can get it out of 3 rectangles.
+
+// Example 2:
+
+// Input: rectangles = [[2,3],[3,7],[4,3],[3,7]]
+// Output: 3
