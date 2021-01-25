@@ -2,7 +2,27 @@
 
 // Given an array nums of distinct positive integers, return the number of tuples (a, b, c, d) such that a * b = c * d where a, b, c, and d are elements of nums, and a != b != c != d.
 
-
+const tupleSameProduct = (nums) => {
+    
+    let matches = 0,
+        product;
+    const map = {};
+    
+    for (let i = 0; i < nums.length; i++) {
+        for (let j = i + 1; j < nums.length; j++) {
+            product = nums[i] * nums[j];
+            if (map[product]) {
+                matches += map[product] * 8;
+                map[product]++;
+            } else {
+                map[product] = 1;
+            }
+        }
+    }
+    
+    return matches;
+    
+};
 
 // Example 1:
 
