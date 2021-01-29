@@ -80,12 +80,17 @@ const myString = "abcabcbb";
 const longestSubstring = (myString) => {
 
     const substrings = [];
+    let largest = 0;
 
     for (let i = 0; i < myString.length; i++) {
 
-        substring[i] = ;
+        substring[i] = myString[i];
 
+        
+        // largest = Math.max(, largest);
     }
+
+    return largest;
 
 }
 
