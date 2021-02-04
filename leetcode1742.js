@@ -39,7 +39,31 @@
 // 1 <= lowLimit <= highLimit <= 105
 
 const countBalls = (lowLimit, highLimit) => {
-
     
-
-}
+    const map = {};
+    let most = 1,
+        current,
+        math = 0;
+    
+    for (let i = lowLimit; i <= highLimit; i++) {
+        
+        current = i;
+        while (current > 0) {
+            math += current % 10;
+            current = Math.floor(current / 10);
+        }
+        
+        if (map[math]) {
+            map[math]++;
+            most = Math.max(map[math], most);
+        } else {
+            map[math] = 1;
+        }
+        
+        math = 0;
+        
+    }
+    
+    return most;
+    
+};
