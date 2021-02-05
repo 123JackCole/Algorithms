@@ -37,3 +37,6 @@
 // -105 <= nums[i], ui, vi <= 105
 // There exists some nums that has adjacentPairs as its pairs.
 
+const restoreArray = (adjacentPairs) => {
+    
+}
