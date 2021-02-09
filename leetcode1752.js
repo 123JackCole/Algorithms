@@ -46,4 +46,16 @@
 
 const check = (nums) => {
     
+    let prev = nums[nums.length - 1],
+        count = 0;
+    
+    for (let i = 0; i < nums.length; i++) {
+        
+        if (prev > nums[i]) count++;
+        prev = nums[i];
+        
+    }
+        
+    return count < 2;
+
 };
