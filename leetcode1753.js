@@ -4,8 +4,6 @@
 
 // Given three integers a​​​​​, b,​​​​​ and c​​​​​, return the maximum score you can get.
 
- 
-
 // Example 1:
 
 // Input: a = 2, b = 4, c = 6
@@ -37,14 +35,40 @@
 // Output: 8
 // Explanation: One optimal set of moves is to take from the 2nd and 3rd piles for 8 turns until they are empty.
 // After that, there are fewer than two non-empty piles, so the game ends.
- 
 
 // Constraints:
 
 // 1 <= a, b, c <= 105
 
 const maximumScore = (a, b, c) => {
-    
+  let max = 0,
+    count = 0;
 
-    
+  while (a + b + c > 1) {
+    max = Math.max(a, b, c);
+    if (a === max) {
+      a--;
+      if (b < c) {
+        c--;
+      } else {
+        b--;
+      }
+    } else if (b === max) {
+      b--;
+      if (a < c) {
+        c--;
+      } else {
+        a--;
+      }
+    } else {
+      c--;
+      if (a < b) {
+        b--;
+      } else {
+        a--;
+      }
+    }
+    count++;
+  }
+  return count;
 };
