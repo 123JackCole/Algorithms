@@ -37,3 +37,8 @@
 // 1 <= word1.length, word2.length <= 3000
 // word1 and word2 consist only of lowercase English letters.
 
+const largestMerge = (word1, word2) => {
+    
+    
+    
+};
