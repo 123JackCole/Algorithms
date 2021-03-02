@@ -30,8 +30,19 @@
 // ruleKey is equal to either "type", "color", or "name".
 // All strings consist only of lowercase letters.
 
+const map = {
+    'type': 0,
+    'color': 1,
+    'name': 2
+};
+
 const countMatches = (items, ruleKey, ruleValue) => {
+    let count = 0;
     
+    for (let i = 0; i < items.length; i++) {
+        if (items[i][map[ruleKey]] === ruleValue) count++;
+    }
     
+    return count;
     
 };
