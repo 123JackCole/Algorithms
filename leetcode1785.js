@@ -6,7 +6,6 @@
 
 // Note that abs(x) equals x if x >= 0, and -x otherwise.
 
- 
 
 // Example 1:
 
