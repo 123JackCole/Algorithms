@@ -77,6 +77,7 @@ const myString = "abcabcbb";
 //const myString = "";
 
 // O n
+// use sliding window or 2 pointers?
 const longestSubstring = (myString) => {
 
     const substrings = [];
