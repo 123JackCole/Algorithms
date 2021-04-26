@@ -81,7 +81,9 @@ const myString = "abcabcbb";
 const longestSubstring = (myString) => {
 
     const substrings = [];
-    let largest = 0;
+    let largest = 0,
+        p1 = myString[0],
+        p2 = myString[myString.length - 1];
 
     for (let i = 0; i < myString.length; i++) {
 
