@@ -15,7 +15,11 @@
 
 // check if left val is less than current val
 
+const btSearch = (n) => {
 
+
+
+}
 
 
 // 2 dimensiona app problem
@@ -24,3 +28,22 @@
 // can only move right and down
 // return if there is a path
 
+
+
+// given an ordered array of values return any combination of elements that add to n
+// [2, 3 ,5 , 7, 9], 12
+
+
+
+
+const twoSum = (array, n) => {
+
+    let target = ;
+
+    for (i in array) {
+
+    }
+
+}
+
+console.log(twoSum([2, 3 ,5 , 7, 9], 12))
