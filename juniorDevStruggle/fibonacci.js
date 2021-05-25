@@ -14,7 +14,8 @@ const fibonacci = (n) => {
 
     for (let i = 0; i < n; i++) {
 
-        nums.push(left + right);
+        [left, right] = [right, left + right];
+        nums.push(right);
 
     }
 
