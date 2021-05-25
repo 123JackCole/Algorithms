@@ -6,11 +6,15 @@
 
 const fibonacci = (n) => {
 
-    const nums = [];
+    const nums = [1, 1];
+    let [left, right] = [1, 1];
+
+    if (n === 1) return [1];
+    if (n === 2) return nums;
 
     for (let i = 0; i < n; i++) {
 
-
+        nums.push(left + right);
 
     }
 
