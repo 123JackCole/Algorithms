@@ -12,7 +12,7 @@ const fibonacci = (n) => {
     if (n === 1) return [1];
     if (n === 2) return nums;
 
-    for (let i = 0; i < n; i++) {
+    for (let i = 2; i < n; i++) {
 
         [left, right] = [right, left + right];
         nums.push(right);
@@ -22,3 +22,5 @@ const fibonacci = (n) => {
     return nums;
 
 }
+
+console.log(fibonacci(15))
