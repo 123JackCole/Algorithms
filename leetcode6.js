@@ -4,6 +4,8 @@
  * @return {string}
  */
  const convert = (s, numRows) => {
+
+    const length = s.length;
     
     const map = {}
     for (let i = 0; i < numRows; i++) {
