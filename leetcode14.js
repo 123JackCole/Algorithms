@@ -2,6 +2,8 @@
  * @param {string[]} strs
  * @return {string}
  */
+
+// currenty pretty slow
  const longestCommonPrefix = (strs) => {
     
     let prefix = strs[0],
