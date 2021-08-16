@@ -10,7 +10,7 @@
     if (grid[x][y] === '1') {
         grid[x][y] = '0';
     } else {
-        return
+        return;
     }
     
     dfs(grid, x - 1, y);
